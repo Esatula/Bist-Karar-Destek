@@ -1,0 +1,1 @@
+# indicators: Teknik gösterge hesaplamaları

@@ -1,0 +1,320 @@
+# config/bist_stocks.yaml
+# BIST Hisse Evreni — 13.09.2026 itibarıyla güncel liste
+# Her çeyrek dönemde değişebilir (Borsa İstanbul açıklamalarını takip edin).
+#
+# Semboller yfinance formatına göre (uzantısız, büyük harf).
+# Kullanım: yfinance → 'THYAO.IS' | tradingview-ta → 'BIST:THYAO'
+
+# ─── BIST-30 (En Likit 30 Hisse) ──────────────────────────────────────────
+bist30:
+  - symbol: THYAO
+    name: Türk Hava Yolları
+    sector: Ulaşım
+  - symbol: AKBNK
+    name: Akbank
+    sector: Bankacılık
+  - symbol: ASELS
+    name: Aselsan
+    sector: Savunma
+  - symbol: BIMAS
+    name: BİM Mağazalar
+    sector: Perakende
+  - symbol: EREGL
+    name: Ereğli Demir Çelik
+    sector: Metal
+  - symbol: FROTO
+    name: Ford Otosan
+    sector: Otomotiv
+  - symbol: GARAN
+    name: Garanti BBVA
+    sector: Bankacılık
+  - symbol: HALKB
+    name: Halk Bankası
+    sector: Bankacılık
+  - symbol: ISCTR
+    name: İş Bankası (C)
+    sector: Bankacılık
+  - symbol: KCHOL
+    name: Koç Holding
+    sector: Holding
+  - symbol: KOZAL
+    name: Koza Altın
+    sector: Madencilik
+  - symbol: MGROS
+    name: Migros
+    sector: Perakende
+  - symbol: PETKM
+    name: Petkim
+    sector: Kimya
+  - symbol: PGSUS
+    name: Pegasus
+    sector: Ulaşım
+  - symbol: SAHOL
+    name: Sabancı Holding
+    sector: Holding
+  - symbol: SISE
+    name: Şişe Cam
+    sector: Cam/Kimya
+  - symbol: TCELL
+    name: Turkcell
+    sector: Telekomünikasyon
+  - symbol: TKFEN
+    name: Tekfen Holding
+    sector: Holding
+  - symbol: TOGG
+    name: Togg
+    sector: Otomotiv
+  - symbol: TTKOM
+    name: Türk Telekom
+    sector: Telekomünikasyon
+  - symbol: TTRAK
+    name: Türk Traktör
+    sector: Otomotiv
+  - symbol: TUPRS
+    name: Tüpraş
+    sector: Enerji
+  - symbol: VAKBN
+    name: Vakıfbank
+    sector: Bankacılık
+  - symbol: VESTL
+    name: Vestel Elektronik
+    sector: Teknoloji
+  - symbol: YKBNK
+    name: Yapı Kredi Bankası
+    sector: Bankacılık
+  - symbol: TAVHL
+    name: TAV Havalimanları
+    sector: Ulaşım
+  - symbol: ENKAI
+    name: Enka İnşaat
+    sector: İnşaat
+  - symbol: SOKM
+    name: Şok Marketler
+    sector: Perakende
+  - symbol: EKGYO
+    name: Emlak Konut GYO
+    sector: GYO
+  - symbol: SKBNK
+    name: Şekerbank
+    sector: Bankacılık
+
+# ─── BIST-100 (BIST-30 + Ek 70 Hisse) ────────────────────────────────────
+# BIST-30 yukarıdaki listeye dahildir. Aşağıdaki ek 70 hisse ile toplam 100 olur.
+bist100_extra:
+  # Finans
+  - symbol: TSKB
+    name: TSKB
+    sector: Bankacılık
+  - symbol: ECZYT
+    name: Eczacıbaşı Yatırım
+    sector: Holding
+  - symbol: ISGYO
+    name: İş GYO
+    sector: GYO
+  - symbol: SNGYO
+    name: Sinpaş GYO
+    sector: GYO
+  - symbol: ZRGYO
+    name: Ziraat GYO
+    sector: GYO
+  - symbol: TRGYO
+    name: Torunlar GYO
+    sector: GYO
+  - symbol: GSDHO
+    name: GSD Holding
+    sector: Holding
+  - symbol: NTHOL
+    name: Net Holding
+    sector: Holding
+  - symbol: DOHOL
+    name: Doğan Holding
+    sector: Holding
+  - symbol: AGHOL
+    name: AG Anadolu Grubu Holding
+    sector: Holding
+
+  # Sanayi / Üretim
+  - symbol: AEFES
+    name: Anadolu Efes
+    sector: Gıda/İçecek
+  - symbol: ULKER
+    name: Ülker Bisküvi
+    sector: Gıda
+  - symbol: AYGAZ
+    name: Aygaz
+    sector: Enerji
+  - symbol: AKSA
+    name: Aksa Akrilik
+    sector: Kimya
+  - symbol: GUBRF
+    name: Gübre Fabrikaları
+    sector: Kimya
+  - symbol: CIMSA
+    name: Çimsa Çimento
+    sector: İnşaat Malz.
+  - symbol: OYAKC
+    name: Oyak Çimento
+    sector: İnşaat Malz.
+  - symbol: KORDS
+    name: Kordsa
+    sector: Tekstil/Kimya
+  - symbol: BRISA
+    name: Brisa
+    sector: Otomotiv Yan
+  - symbol: OTKAR
+    name: Otokar
+    sector: Otomotiv
+  - symbol: ASUZU
+    name: Anadolu Isuzu
+    sector: Otomotiv
+  - symbol: ARCLK
+    name: Arçelik
+    sector: Beyaz Eşya
+  - symbol: VESBE
+    name: Vestel Beyaz Eşya
+    sector: Beyaz Eşya
+  - symbol: TMSN
+    name: Tamsan
+    sector: Metal
+  - symbol: KRDMA
+    name: Kardemir (A)
+    sector: Metal
+  - symbol: KRDMB
+    name: Kardemir (B)
+    sector: Metal
+  - symbol: ISDMR
+    name: İskenderun Demir Çelik
+    sector: Metal
+  - symbol: PARSN
+    name: Parsan Makina
+    sector: Metal
+
+  # Enerji
+  - symbol: AKSEN
+    name: Aksa Enerji
+    sector: Enerji
+  - symbol: ENJSA
+    name: Enerjisa
+    sector: Enerji
+  - symbol: ODAS
+    name: Odaş Elektrik
+    sector: Enerji
+  - symbol: ZOREN
+    name: Zorlu Enerji
+    sector: Enerji
+  - symbol: KONTR
+    name: Kontrolmatik
+    sector: Enerji/Teknoloji
+
+  # Teknoloji / Yazılım
+  - symbol: LOGO
+    name: Logo Yazılım
+    sector: Teknoloji
+  - symbol: NETAS
+    name: Netaş Telekomünikasyon
+    sector: Teknoloji
+  - symbol: INDES
+    name: İndeks Bilgisayar
+    sector: Teknoloji
+  - symbol: SMART
+    name: Smart Güneş Enerjisi
+    sector: Teknoloji
+  - symbol: ARDYZ
+    name: Ardıç Yazılım
+    sector: Teknoloji
+
+  # Perakende / Tüketim
+  - symbol: MAVI
+    name: Mavi Giyim
+    sector: Perakende
+  - symbol: YATAS
+    name: Yataş
+    sector: Perakende
+  - symbol: SELEC
+    name: Selçuk Ecza
+    sector: İlaç/Sağlık
+  - symbol: MPARK
+    name: Medical Park
+    sector: Sağlık
+  - symbol: DOAS
+    name: Doğuş Otomotiv
+    sector: Otomotiv Dağıtım
+
+  # Ulaşım / Lojistik
+  - symbol: RYSAS
+    name: Reysaş Lojistik
+    sector: Lojistik
+  - symbol: CLEBI
+    name: Çelebi Hava Servisi
+    sector: Ulaşım
+  - symbol: BJKAS
+    name: Beşiktaş Futbol
+    sector: Spor
+  - symbol: FENER
+    sector: Spor
+
+  # Sigorta / Diğer Finans
+  - symbol: TURSG
+    name: Türk Sigorta
+    sector: Sigorta
+  - symbol: SNPAM
+    name: Sınpaş Yapı
+    sector: GYO
+
+  # Tekstil
+  - symbol: YUNSA
+    name: Yünsa
+    sector: Tekstil
+  - symbol: DYOBY
+    name: DYO Boya
+    sector: Kimya
+
+  # Ek Holding / Sanayi
+  - symbol: TTRAK
+    name: Türk Traktör (tekrar kontrolü)
+    sector: Otomotiv
+  - symbol: EGEEN
+    name: Ege Endüstri
+    sector: Metal
+  - symbol: AKENR
+    name: Ak Enerji
+    sector: Enerji
+  - symbol: PRKME
+    name: Park Elektrik
+    sector: Madencilik
+  - symbol: KCAER
+    name: Kayseri Şeker
+    sector: Gıda
+  - symbol: CEMAS
+    name: Çemaş Döküm
+    sector: Metal
+  - symbol: AGESA
+    name: Agesa Hayat Emeklilik
+    sector: Sigorta
+  - symbol: KARSN
+    name: Karsan Otomotiv
+    sector: Otomotiv
+  - symbol: GOLTS
+    name: Göltaş Çimento
+    sector: İnşaat Malz.
+  - symbol: CEMTS
+    name: Çemtaş Çelik
+    sector: Metal
+  - symbol: ALARK
+    name: Alarko Holding
+    sector: Holding
+  - symbol: AKFGY
+    name: Akfen GYO
+    sector: GYO
+  - symbol: HLGYO
+    name: Halk GYO
+    sector: GYO
+  - symbol: LKMNH
+    name: Lokman Hekim
+    sector: Sağlık
+  - symbol: ORGE
+    name: Orge Enerji
+    sector: Enerji
+  - symbol: BFREN
+    name: Bosch Fren
+    sector: Otomotiv Yan

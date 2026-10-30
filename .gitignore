@@ -1,0 +1,46 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+
+# Sanal ortamlar ve yerel paket çıktıları
+.venv/
+venv/
+env/
+ENV/
+build/
+dist/
+*.egg-info/
+
+# Gizli bilgiler ve kişisel ayarlar
+.env
+.env.*
+!.env.example
+config/settings.yaml
+.streamlit/secrets.toml
+secrets.yaml
+secrets.json
+
+# İndirilen veriler ve oluşturulan çıktılar
+/data/
+*.parquet
+*.db
+*.sqlite
+*.sqlite3
+*.csv
+*.log
+logs/
+tmp/
+
+# Test çıktıları
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Editör ve işletim sistemi dosyaları
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

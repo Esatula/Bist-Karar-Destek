@@ -1,0 +1,82 @@
+# Hisse Takip Listesi
+# BIST sembolleri (yfinance için ".IS" otomatik eklenir, buraya sadece kök sembol yazın)
+watchlist:
+  - THYAO   # Türk Hava Yolları
+  - ASELS   # Aselsan
+  - SISE    # Şişe Cam
+  - GARAN   # Garanti BBVA
+  - KCHOL   # Koç Holding
+
+# Backtest Ayarları
+backtest:
+  start_date: "2020-01-01"
+  end_date: "2024-12-31"
+  interval: "1d"           # Günlük veri
+  initial_capital: 100000  # TL
+
+# Risk Parametreleri
+risk:
+  max_risk_per_trade_pct: 2.0    # Tek işlemde portföyün en fazla %2'si riske atılır
+  stop_loss_atr_multiplier: 2.0  # Stop-loss için ATR çarpanı (ör. ATR x 2)
+  commission_pct: 0.1            # İşlem başına komisyon yüzdesi (%0.1)
+
+# Portföy Seviyesi Risk Yönetimi (Portfolio Controller)
+portfolio:
+  max_open_positions: 5          # Aynı anda açık tutulabilecek maksimum pozisyon sayısı
+  max_sector_weight_pct: 30.0    # Aynı sektörün portföydeki maksimum ağırlığı (%)
+  max_drawdown_pct: 20.0         # Portföy genel düşüşü bu limiti aşarsa alımlar durur (%)
+
+# Teknik Analiz Sihirli Sayıları (Overfitting Koruması için ayrıldı)
+technical_params:
+  rsi_overbought: 70
+  rsi_oversold: 30
+  macd_buy_cap: 55               # Kötü piyasa / temel analiz durumunda skora konulan üst sınır
+  ema_fast: 20
+  ema_slow: 50
+
+# Sinyal Motoru Ağırlıkları
+# Not: Toplamı 1.0 olmalı. TV sinyali alınamazsa teknik+haber normalize edilir.
+signal_weights:
+  technical:    0.50   # Teknik analizin ağırlığı
+  tradingview:  0.20   # TradingView sinyalinin ağırlığı
+  news:         0.30   # Haber analizinin ağırlığı
+
+# Sinyal Eşikleri (0-100 skala)
+signal_thresholds:
+  buy:  70    # Bu değer ve üstü → AL önerisi
+  sell: 30    # Bu değer ve altı → SAT önerisi
+  # Arası → BEKLE
+
+# LLM Ayarları
+llm:
+  provider: "local_gguf"               # "local_gguf" (varsayılan, ücretsiz)
+  model: "llm/Dolphin3.0-Llama3.1-8B-Q4_K_L.gguf"
+  max_news_age_days: 7                  # Kaç günlük haberleri analiz etmeli
+
+# TradingView Sinyal Ayarları (tradingview-ta kütüphanesi)
+tradingview:
+  exchange: "BIST"      # Borsa kodu
+  screener: "turkey"   # TradingView screener
+  interval: "1d"       # 1m, 5m, 15m, 1h, 4h, 1d, 1W, 1M
+
+# Haber Kaynakları
+news_sources:
+  # Çalışan kaynaklar (test edildi 13.09.2026):
+  #   BloombergHT, NTV, HaberTürk, Hürriyet, Sözcü, Sabah, Investing TR
+  #   KAP (Google News RSS üzerinden Özel Durum Açıklamaları)
+
+# Kaynak Bazlı Haber Skoru Çarpanları
+news_source_weights:
+  KAP: 2.0        # KAP bildirimleri fiyatı doğrudan etkiler, etkisi 2 kat
+  default: 1.0    # Diğer genel ekonomi haberleri
+
+# Zaman Çürümesi (Time Decay) λ Değerleri (Half-life = ln(2)/λ)
+decay_lambdas:
+  default: 0.231    # Standart haberler (~3 gün yarı ömür)
+  KAP: 0.100        # Bilançolar/Resmi (~7 gün yarı ömür)
+  structural: 0.050 # Birleşme/CEO (~14 gün yarı ömür)
+
+# Veri Depolama
+storage:
+  price_data_folder: "data/raw"
+  news_db_path: "data/news/news.db"
